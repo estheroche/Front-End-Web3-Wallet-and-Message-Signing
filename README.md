@@ -30,5 +30,14 @@ Let's break down the code step-by-step:
 In summary, this contract is a simple calculator that allows the contract owner to set the state value, multiply it, and divide it. It ensures data security by using modifiers to restrict access to certain functions to the contract owner.
 
 
+# Front-End 
+
+- This DAPP used tailwindCSS for styling.
+- Its a React plus Vite App
+
+
+
+
+
 
 
