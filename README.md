@@ -36,6 +36,11 @@ In summary, this contract is a simple calculator that allows the contract owner 
 - Its a React plus Vite App
 
 
+# contract Address
+
+0xc63A24f469E1eFe196968D9126a289f3b462E8F3
+
+
 
 
 
