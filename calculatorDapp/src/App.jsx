@@ -51,12 +51,12 @@ function App() {
 
   const { data: waitData, isError: waitError, isLoading: waitLoading, isSuccess: waitSuccess } = useWaitForTransaction({
     hash: writeData?.hash,
-    onSuccess(data){
+    onSuccess(data) {
       console.log(data)
       toast.success('Successfully set new value')
     },
 
-    onError(error){
+    onError(error) {
       console.log(error)
       toast.error(error.message)
     }
@@ -64,12 +64,12 @@ function App() {
 
   const { data: waitData2, isError: waitError2, isLoading: waitLoading2, isSuccess: waitSuccess2 } = useWaitForTransaction({
     hash: writeData2?.hash,
-    onSuccess(data){
+    onSuccess(data) {
       console.log(data)
       toast.success('Successfully multiplied')
     },
 
-    onError(error){
+    onError(error) {
       console.log(error)
       toast.error(error.message)
     }
@@ -77,12 +77,12 @@ function App() {
 
   const { data: waitData3, isError: waitError3, isLoading: waitLoading3, isSuccess: waitSuccess3 } = useWaitForTransaction({
     hash: writeData3?.hash,
-    onSuccess(data){
+    onSuccess(data) {
       console.log(data)
       toast.success('Successfully divided')
     },
 
-    onError(error){
+    onError(error) {
       console.log(error)
       toast.error(error.message)
     }
@@ -133,19 +133,18 @@ function App() {
               className='border-slate-300 rounded-[2px] w-6/12 placeholder-slate-300 m-auto'
               placeholder='enter no.'
               value={number}
-              onChange={(e)=>{setNumber(e.target.value)}}
+              onChange={(e) => { setNumber(e.target.value) }}
 
             />
 
             <div className='flex items-center justify-center gap-x-4'>
-              <button onClick={handleSetValue} className='p-2 rounded-md bg-blue-500 text-white hover:bg-opacity-50'>{writeLoading || waitLoading ? `setting ...` : `set`}</button>
               <button onClick={handleMultiplication} className='p-2 rounded-md bg-lime-500 text-white hover:bg-opacity-50'>{writeLoading2 || waitLoading2 ? `multiplying ...` : `multiply`}</button>
               <button onClick={handleDivision} className='p-2 rounded-md border border-lime-500 text-lime-500 hover:bg-lime-100'>{writeLoading3 || waitLoading3 ? `dividing ...` : `divide`}</button>
             </div>
           </form>
         </div>
       </div>
-      <ToastContainer/>
+      <ToastContainer />
     </div>
   )
 }
